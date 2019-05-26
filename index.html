@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Big Five Aspects Scale results &mdash; ejelome</title>
+        <meta name="description"
+              content="The Big Five Aspects Scale results" />
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+              crossorigin="anonymous" />
+        <link rel="stylesheet"
+              href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+        <style>
+            body {
+                font: 1rem/150% sans-serif;
+                font-size: 75%;
+            }
+            h1 {
+                border-bottom: solid 1px #dee2e6;
+                font-size: medium;
+                margin: 1rem;
+                padding-bottom: 1rem;
+                text-align: center;
+            }
+            .table {
+                border: 0;
+                border-collapse: collapse !important;
+                margin-bottom: 1rem !important;
+            }
+            th {
+                border-bottom: 0 !important;
+                padding-left: 0.5rem !important;
+            }
+            th {
+                width: 10%;
+            }
+            th:nth-child(5),
+            th:last-child {
+                width: 30%;
+            }
+            td:nth-child(2),
+            td:nth-child(3),
+            td:nth-child(4) {
+                text-align: center;
+            }
+            tfoot {
+                display: none;
+            }
+            ul {
+                margin-top: 1rem;
+                padding-left: 1rem;
+            }
+            .dataTables_length,
+            .dataTables_filter {
+                margin-bottom: 1rem;
+            }
+            .dataTables_length select,
+            .dataTables_filter input {
+                font-size: 100%;
+                margin: 0 0.5rem;
+            }
+            .dataTables_wrapper {
+                margin-bottom: 1rem;
+            }
+            .copyright {
+                border-top: solid 1px #dee2e6;
+                font-size: smaller;
+                margin: 1rem;
+                padding-top: 1rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <a href="https://github.com/ejelome">@ejelome</a>'s
+            <em>The Big Five Aspects Scale</em> results
+        </h1>
+        <div class="container-fluid"></div>
+        <div class="copyright">&copy; 2019
+            <a href="https://www.understandmyself.com">Understand Myself</a>.
+            Some rights reserved.
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+                integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+                crossorigin="anonymous"></script>
+        <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".container-fluid").load("table.html", function () {
+                    $(".traits").DataTable({
+                       "order": [2, "desc"],
+                       "iDisplayLength": 25
+                    });
+                    
+                    /* Entries: */
+                    $(".dataTables_length").addClass("form-inline");
+                    $(".dataTables_length select").addClass("form-control form-control-sm");
+                    
+                    /* Search: */
+                    $(".dataTables_filter").addClass("form-inline");
+                    $(".dataTables_filter input").addClass("form-control form-control-sm");
+                });
+            });
+        </script>
+    </body>
+</html>
