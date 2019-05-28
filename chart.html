@@ -5,12 +5,12 @@
         <title>The Big Five Aspects Scale results &mdash; ejelome</title>
         <meta name="description"
               content="The Big Five Aspects Scale results" />
-        <link rel="stylesheet" 
+        <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
         <style>
-            body {
+             body {
                 font: 1rem/150% sans-serif;
                 font-size: 75%;
             }
@@ -19,6 +19,9 @@
                 position: absolute;
                 left: 33%;
                 top: 1rem;
+            }
+            a:hover {
+                cursor: pointer;
             }
             nav,
             .tab-content {
@@ -32,7 +35,7 @@
             }
             .filters {
                 position: absolute;
-                right: 0; 
+                right: 0;
             }
             .dropdown-menu {
                 min-width: 100%;
@@ -47,8 +50,9 @@
             .dropdown.filter-show {
                 margin-right: 0.5rem;
             }
-            .dropdown .dropdown-item.active {
-                color: #FFF;
+            .dropdown .dropdown-item.active,
+            .dropdown .dropdown-item:active {
+                color: #FFF !important;
             }
             .wrapper {
                 width: 80%;
@@ -65,21 +69,21 @@
             <em>The Big Five Aspects Scale</em> results
         </h1>
         <nav>
-            <div class="nav nav-tabs" 
-                 id="nav-tab" 
+            <div class="nav nav-tabs"
+                 id="nav-tab"
                  role="tablist">
-                <a class="nav-item nav-link" 
-                   id="nav-table-tab" 
-                   data-toggle="tab" 
-                   href="index.html" 
-                   role="tab" 
-                   aria-controls="nav-table" 
+                <a class="nav-item nav-link"
+                   id="nav-table-tab"
+                   data-toggle="tab"
+                   href="index.html"
+                   role="tab"
+                   aria-controls="nav-table"
                    aria-selected="false">Table</a>
                 <a class="nav-item nav-link active"
                    id="nav-chart-tab"
                    data-toggle="tab"
-                   href="chart.html" 
-                   role="tab" 
+                   href="chart.html"
+                   role="tab"
                    aria-controls="nav-chart"
                    aria-selected="true">Chart</a>
             </div>
@@ -88,13 +92,13 @@
              id="nav-tabContent">
             <div class="filters form-inline">
                 <div class="dropdown filter-show">
-                    <button class="btn btn-sm btn-light dropdown-toggle" 
-                            type="button" 
-                            id="dropdownMenuButton" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true" 
+                    <button class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
                             aria-expanded="false">Show</button>
-                    <div class="dropdown-menu" 
+                    <div class="dropdown-menu"
                          aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item show-all">Show All</a>
                         <a class="dropdown-item show-traits">Show Traits Only</a>
@@ -102,13 +106,13 @@
                     </div>
                 </div>
                 <div class="dropdown dropdown-menu-right filter-sort">
-                    <button class="btn btn-sm btn-light dropdown-toggle" 
-                            type="button" 
-                            id="dropdownMenuButton" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true" 
+                    <button class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
                             aria-expanded="false">Sort</button>
-                    <div class="dropdown-menu dropdown-menu-right" 
+                    <div class="dropdown-menu dropdown-menu-right"
                          aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item sort-id" >Sort By ID</a>
                         <a class="dropdown-item sort-name" >Sort By Name</a>
@@ -287,43 +291,43 @@
                 };
                 const ctx = document.getElementById("polar-chart");
                 const polarChart = Chart.PolarArea(ctx, config);
-            
+
                 /* Dropdowns: */
                 $(".dropdown-item").click(function () {
                     $(this).parent().parent().find(".btn").text($(this).text());
                     $(this).parent().find(".dropdown-item").removeClass("active");
                     $(this).addClass("active");
                 });
-            
+
                 /* Show dropdowns: */
                 $(".show-all").click(() => {
                     cSource = source;
                     polarChart.config.data = updateData(cSource);
                     polarChart.update();
                 });
-            
+
                 $(".show-traits").click(() => {
                     cSource = Object.values(source).filter(o => o.type === "trait");
                     polarChart.config.data = updateData(cSource);
                     polarChart.update();
                 });
-                
+
                 $(".show-aspects").click(() => {
                     cSource = Object.values(source).filter(o => o.type === "aspect");
                     polarChart.data = updateData(cSource);
                     polarChart.update();
                 });
-            
+
                 // Select "Show All" dropdown by default:
                 $(".show-all").click();
-            
+
                 /* Sort dropdowns: */
                 $(".sort-id").click(() => {
                     cSource = cSource.sort((a, b) => a.id - b.id);
                     polarChart.data = updateData(cSource);
                     polarChart.update();
                 });
-            
+
                 $(".sort-name").click(() => {
                     cSource = cSource.sort((a, b) => {
                         if (a.name < b.name) return -1;
@@ -333,20 +337,20 @@
                     polarChart.data = updateData(cSource);
                     polarChart.update();
                 });
-            
+
                 $(".sort-score").click(() => {
                     cSource = cSource.sort((a, b) => b.score - a.score);
                     polarChart.data = updateData(cSource);
                     polarChart.update();
                 });
-            
+
                 // Select "Sort By Score" dropdown by default:
                 $(".sort-score").click();
-                
+
                 /* Go to page on click: */
                 $(".nav-link").click(function () {
                     let newURL = $(this).attr("href");
-            
+
                     $("html").fadeOut(() => {
                         location.href = newURL;
                     });
