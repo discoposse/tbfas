@@ -6,9 +6,7 @@
         <meta name="description"
               content="The Big Five Aspects Scale results" />
         <link rel="stylesheet" 
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous" />
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
         <link rel="stylesheet"
               href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
         <style>
@@ -17,11 +15,23 @@
                 font-size: 75%;
             }
             h1 {
-                border-bottom: solid 1px #dee2e6;
                 font-size: medium;
+                position: absolute;
+                left: 33%;
+                top: 1rem;
+            }
+            nav,
+            .tab-content {
                 margin: 1rem;
-                padding-bottom: 1rem;
-                text-align: center;
+            }
+            .tab-content {
+                position: relative;
+            }
+            .nav-item.nav-link.active {
+                font-weight: bold;
+            }
+            .nav-item.nav-link.active {
+                font-weight: bold;
             }
             .table {
                 border: 0;
@@ -77,20 +87,36 @@
             <a href="https://github.com/ejelome">@ejelome</a>'s
             <em>The Big Five Aspects Scale</em> results
         </h1>
-        <div class="container-fluid"></div>
-        <div class="copyright">&copy; 2019
-            <a href="https://www.understandmyself.com">Understand Myself</a>.
-            Some rights reserved.
+        <nav>
+            <div class="nav nav-tabs" 
+                 id="nav-tab" 
+                 role="tablist">
+                <a class="nav-item nav-link active"
+                   id="nav-table-tab"
+                   data-toggle="tab"
+                   href="index.html" 
+                   role="tab" 
+                   aria-controls="nav-table"
+                   aria-selected="true">Table</a>
+                <a class="nav-item nav-link" 
+                   id="nav-chart-tab" 
+                   data-toggle="tab" 
+                   href="chart.html" 
+                   role="tab" 
+                   aria-controls="nav-chart" 
+                   aria-selected="false">Chart</a>
+            </div>
+        </nav>
+        <div class="tab-content"
+             id="nav-tabContent">
+            <div class="container-fluid"></div>
+            <div class="copyright">&copy; 2019
+                <a href="https://www.understandmyself.com">Understand Myself</a>.
+                Some rights reserved.
+            </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-                integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script>
             $(document).ready(function () {
@@ -107,6 +133,15 @@
                     /* Search: */
                     $(".dataTables_filter").addClass("form-inline");
                     $(".dataTables_filter input").addClass("form-control form-control-sm");
+                });
+                
+                /* Go to page on click: */
+                $(".nav-link").click(function () {
+                    let newURL = $(this).attr("href");
+
+                    $("html").fadeOut(() => {
+                        location.href = newURL;
+                    });
                 });
             });
         </script>
