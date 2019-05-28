@@ -322,7 +322,7 @@
             
                 /* Sort dropdowns: */
                 $(".sort-id").click(() => {
-                    cSource = cSource.sort((a, b) => a.id - b.id);
+                    cSource = cSource.sort((a, b) => b.id - a.id);
                     polarChart.data = updateData(cSource);
                     polarChart.update();
                 });
