@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <title>The Big Five Aspects Scale results &mdash; ejelome</title>
         <meta name="description"
               content="The Big Five Aspects Scale results" />
@@ -101,13 +101,13 @@
                 font-weight: bold;
             }
             li.agree .far {
-                color: #6a6;
+                color: #6A6;
             }
             li.neutral .far {
-                color: #66d;
+                color: #66D;
             }
             li.disagree .far {
-                color: #d66;
+                color: #D66;
             }
             .dataTables_length,
             .dataTables_filter {
@@ -153,6 +153,13 @@
                    role="tab" 
                    aria-controls="nav-chart" 
                    aria-selected="false">Chart</a>
+                <a class="nav-item nav-link" 
+                   id="nav-video-tab" 
+                   data-toggle="tab" 
+                   href="video.html" 
+                   role="tab" 
+                   aria-controls="nav-video" 
+                   aria-selected="false">Video</a>
             </div>
         </nav>
         <div class="tab-content"
@@ -202,14 +209,14 @@
                                         
                     /* Enable tooltip: */
                     $(() => $('[data-toggle="tooltip"]').tooltip());
-
+            
                     /* Add icons before bullet points: */
                     $("li.agree").prepend("<i class=\"far fa-thumbs-up\"></i>");
                     $("li.agree").attr({title: "Agree", "data-toggle": "tooltip", "data-placement": "left"});
-
+            
                     $("li.neutral").prepend("<i class=\"far fa-hand-peace\"></i>");
                     $("li.neutral").attr({title: "Neutral", "data-toggle": "tooltip", "data-placement": "left"});
-
+            
                     $("li.disagree").prepend("<i class=\"far fa-thumbs-down\"></i>");
                     $("li.disagree").attr({title: "Disagree", "data-toggle": "tooltip", "data-placement": "left"});
                                         
@@ -219,7 +226,7 @@
                         $(this).parent().find(".dropdown-item").removeClass("active");
                         $(this).addClass("active");
                     });
-
+            
                     /* Show dropdowns: */
                     $(".show-all").click(() => {
                         $("li.agree").fadeIn("slow");
@@ -252,7 +259,7 @@
                 /* Go to page on click: */
                 $(".nav-link").click(function () {
                     let newURL = $(this).attr("href");
-
+            
                     $("html").fadeOut(() => {
                         location.href = newURL;
                     });
