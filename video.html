@@ -216,13 +216,17 @@
                 });
 
                 /* Resize iframe based on resolution: */
-                const iframeResolution = () =>
-                    $("iframe")
-                        .prop("height", Math.floor($(".col-3").height()))
-                        .prop("width", Math.floor($(".col-9").width()));
+                const iframeResolution = () => {
+                    let border = 2;
+                    let height = Math.floor($(".col-3").height() - border);
+                    let width = Math.floor($(".col-9").width() - border);
+                    $("iframe").prop("height", height)
+                               .prop("width", width);
+                };
                 
                 iframeResolution();
                 $(window).resize(() => iframeResolution());
+            });
             });
         </script>
     </body>
