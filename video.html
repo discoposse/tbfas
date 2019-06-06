@@ -39,6 +39,9 @@
             .col-3 {
                 padding-right: 15px !important;
             }
+            iframe {
+                border: 1px solid rgba(0, 0, 0, 0.125);
+            }
         </style>
     <body>
         <h1>
@@ -211,6 +214,15 @@
                                .tooltip();
                     }
                 });
+
+                /* Resize iframe based on resolution: */
+                const iframeResolution = () =>
+                    $("iframe")
+                        .prop("height", Math.floor($(".col-3").height()))
+                        .prop("width", Math.floor($(".col-9").width()));
+                
+                iframeResolution();
+                $(window).resize(() => iframeResolution());
             });
         </script>
     </body>
