@@ -58,6 +58,9 @@
             .dropdown .dropdown-item:active {
                 color: #FFF !important;
             }
+            .dataTables_filter .form-control {
+                margin: 0;
+            }
             .table {
                 border: 0;
                 border-collapse: collapse !important;
@@ -124,7 +127,7 @@
             .copyright {
                 border-top: solid 1px #dee2e6;
                 font-size: smaller;
-                margin: 1rem;
+                margin: 1rem 0;
                 padding-top: 1rem;
                 text-align: center;
             }
@@ -181,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid"></div>
+            <div class="wrapper"></div>
             <div class="copyright">&copy; 2019
                 <a href="https://www.understandmyself.com">Understand Myself</a>.
                 Some rights reserved.
@@ -193,7 +196,7 @@
         <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script>
             $(document).ready(() => {
-                $(".container-fluid").load("table.html", () => {
+                $(".wrapper").load("table.html", () => {
                     $(".traits").DataTable({
                        "order": [3, "desc"],
                        "iDisplayLength": 25
