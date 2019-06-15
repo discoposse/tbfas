@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>The Big Five Aspects Scale results &mdash; ejelome</title>
+        <meta name="description"
+              content="The Big Five Aspects Scale results" />
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+        <link rel="stylesheet"
+              href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+        <style>
+            body {
+                font: 1rem/150% sans-serif;
+                font-size: 70%;
+            }
+            h1 {
+                font-size: medium;
+                position: absolute;
+                left: 33%;
+                top: 1rem;
+            }
+            a:hover {
+                cursor: pointer;
+            }
+            nav,
+            .tab-content {
+                margin: 1rem;
+            }
+            .tab-content {
+                position: relative;
+            }
+            .nav-item.nav-link.active {
+                font-weight: bold;
+            }
+            .nav-item.nav-link.active {
+                font-weight: bold;
+            }
+            .filters {
+                position: absolute;
+                left: 10.8rem;
+                top: 0.4rem;
+                z-index: 1;
+            }
+            .dropdown-menu {
+                min-width: 100%;
+            }
+            .dropdown .btn,
+            .dropdown .dropdown-item {
+                font-size: x-small;
+            }
+            .dropdown .btn {
+                border-color: #CED4DA;
+            }
+            .dropdown .dropdown-item.active,
+            .dropdown .dropdown-item:active {
+                color: #FFF !important;
+            }
+            .dataTables_filter .form-control {
+                margin: 0;
+            }
+            .table {
+                border: 0;
+                border-collapse: collapse !important;
+                margin-bottom: 1rem !important;
+            }
+            th {
+                border-bottom: 0 !important;
+                padding-left: 0.5rem !important;
+            }
+            th {
+                width: 10%;
+            }
+            th:first-child {
+                width: 1%;
+            }
+            th:nth-child(6),
+            th:last-child {
+                width: 30%;
+            }
+            td:first-child,
+            td:nth-child(3),
+            td:nth-child(4),
+            td:nth-child(5) {
+                text-align: center;
+            }
+            tfoot {
+                display: none;
+            }
+            ul {
+                margin-top: 1rem;
+                padding-left: 0;
+            }
+            ul,
+            li.agree,
+            li.disagree,
+            li.neutral {
+                list-style: none;
+            }
+            li .far {
+                margin-right: 0.25rem;
+                font-weight: bold;
+            }
+            li.agree .far {
+                color: #6A6;
+            }
+            li.neutral .far {
+                color: #66D;
+            }
+            li.disagree .far {
+                color: #D66;
+            }
+            .dataTables_length,
+            .dataTables_filter {
+                margin-bottom: 1rem;
+            }
+            .dataTables_length select,
+            .dataTables_filter input {
+                font-size: 100%;
+                margin: 0 0.5rem;
+            }
+            .dataTables_wrapper {
+                margin-bottom: 1rem;
+            }
+            .copyright {
+                border-top: solid 1px #dee2e6;
+                font-size: smaller;
+                margin: 1rem 0;
+                padding-top: 1rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <a href="https://github.com/ejelome">@ejelome</a>'s
+            <em>The Big Five Aspects Scale</em> results
+        </h1>
+        <nav>
+            <div class="nav nav-tabs" 
+                 id="nav-tab" 
+                 role="tablist">
+                <a class="nav-item nav-link active"
+                   id="nav-table-tab"
+                   data-toggle="tab"
+                   href="index.html" 
+                   role="tab" 
+                   aria-controls="nav-table"
+                   aria-selected="true">Table</a>
+                <a class="nav-item nav-link" 
+                   id="nav-chart-tab" 
+                   data-toggle="tab" 
+                   href="chart.html" 
+                   role="tab" 
+                   aria-controls="nav-chart" 
+                   aria-selected="false">Chart</a>
+                <a class="nav-item nav-link" 
+                   id="nav-video-tab" 
+                   data-toggle="tab" 
+                   href="video.html" 
+                   role="tab" 
+                   aria-controls="nav-video" 
+                   aria-selected="false">Video</a>
+            </div>
+        </nav>
+        <div class="tab-content"
+             id="nav-tabContent">
+            <div class="filters form-inline">
+                <div class="dropdown dropdown-menu-right filter-show">
+                    <button class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">Show</button>
+                    <div class="dropdown-menu"
+                         aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item show-all">Show All Bullets</a>
+                        <a class="dropdown-item show-agree" >Show Agreed Bullets Only</a>
+                        <a class="dropdown-item show-neutral">Show Neutral Bullets Only</a>
+                        <a class="dropdown-item show-disagree">Show Disagreed Bullets Only</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper"></div>
+            <div class="copyright">&copy; 2019
+                <a href="https://www.understandmyself.com">Understand Myself</a>.
+                Some rights reserved.
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                $(".wrapper").load("table.html", () => {
+                    $(".traits").DataTable({
+                       "order": [3, "desc"],
+                       "iDisplayLength": 25
+                    });
+                    
+                    /* Entries: */
+                    $(".dataTables_length").addClass("form-inline");
+                    $(".dataTables_length select").addClass("form-control form-control-sm");
+                    
+                    /* Search: */
+                    $(".dataTables_filter").addClass("form-inline");
+                    $(".dataTables_filter input").addClass("form-control form-control-sm");
+                                        
+                    /* Enable tooltip: */
+                    $(() => $('[data-toggle="tooltip"]').tooltip());
+            
+                    /* Add icons before bullet points: */
+                    $("li.agree").prepend("<i class=\"far fa-thumbs-up\"></i>");
+                    $("li.agree").attr({title: "Agree", "data-toggle": "tooltip", "data-placement": "left"});
+            
+                    $("li.neutral").prepend("<i class=\"far fa-hand-peace\"></i>");
+                    $("li.neutral").attr({title: "Neutral", "data-toggle": "tooltip", "data-placement": "left"});
+            
+                    $("li.disagree").prepend("<i class=\"far fa-thumbs-down\"></i>");
+                    $("li.disagree").attr({title: "Disagree", "data-toggle": "tooltip", "data-placement": "left"});
+                                        
+                    /* Dropdowns: */
+                    $(".dropdown-item").click(function () {
+                        $(this).parent().parent().find(".btn").text($(this).text());
+                        $(this).parent().find(".dropdown-item").removeClass("active");
+                        $(this).addClass("active");
+                    });
+            
+                    /* Show dropdowns: */
+                    $(".show-all").click(() => {
+                        $("li.agree").fadeIn("slow");
+                        $("li.neutral").fadeIn("slow");
+                        $("li.disagree").fadeIn("slow");
+                    });
+                    
+                    $(".show-agree").click(() => {
+                        $("li.agree").fadeIn("slow");
+                        $("li.neutral").fadeOut("slow");
+                        $("li.disagree").fadeOut("slow");
+                    });
+                    
+                    $(".show-neutral").click(() => {
+                        $("li.agree").fadeOut("slow");
+                        $("li.neutral").fadeIn("slow");
+                        $("li.disagree").fadeOut("slow");
+                    });
+                    
+                    $(".show-disagree").click(() => {
+                        $("li.agree").fadeOut("slow");
+                        $("li.neutral").fadeOut("slow");
+                        $("li.disagree").fadeIn("slow");
+                    });
+                    
+                    // Select "Show All Bullets" dropdown by default:
+                    $(".show-all").click();
+                });
+                
+                /* Go to page on click: */
+                $(".nav-link").click(function () {
+                    let newURL = $(this).attr("href");
+            
+                    $("html").fadeOut(() => {
+                        location.href = newURL;
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
