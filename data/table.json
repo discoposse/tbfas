@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "trait": "Agreeableness",
+    "aspect": "",
+    "score": 80,
+    "rating": "High",
+    "pros": [],
+    "cons": []
+  },
+  {
+    "id": 2,
+    "trait": "Agreeableness",
+    "aspect": "Compassion",
+    "score": 66,
+    "rating": "Moderately High",
+    "pros": [
+      "\u2713 Interest in the problems of others",
+      "\u2713 Help others avoid negative emotion",
+      "\u2713 Has a noticeably soft side",
+      "\u2713 People turn to for a listening ear",
+      "\u2753 Make time and kind things for others",
+      "\u2753 Can sacrifice own needs and interests",
+      "\u2753 Sympathetic and nice",
+      "\u2753 Empathetic and caring",
+      "\u2753 Other-oriented"
+    ],
+    "cons": [
+      "\u2713 Prone to resentment",
+      "\u2753 Difficult to negotiate own behalf",
+      "\u2753 Doesn't usually get what's deserved (e.g. hard work"
+    ]
+  },
+  {
+    "id": 3,
+    "trait": "Agreeableness",
+    "aspect": "Politeness",
+    "score": 85,
+    "rating": "High",
+    "pros": [
+      "\u2713 Polite",
+      "\u2713 Respectful",
+      "\u2713 Avoids conflict",
+      "\u2753 Deferential to authority",
+      "\u2753 Obedient",
+      "\u2753 Steer clear of confrontations or fights"
+    ],
+    "cons": [
+      "\u2713 Hates to appear or be pushy",
+      "\u2753 Uncomfortable challenging other people"
+    ]
+  },
+  {
+    "id": 4,
+    "trait": "Conscientiousness",
+    "aspect": "",
+    "score": 11,
+    "rating": "Low",
+    "pros": [],
+    "cons": []
+  },
+  {
+    "id": 5,
+    "trait": "Conscientiousness",
+    "aspect": "Industriousness",
+    "score": 18,
+    "rating": "Low",
+    "pros": [
+      "\u2713 Lets people and self off the hook",
+      "\u2713 Laissez-faire, whatever-will-be-will-be attitude toward life",
+      "\u2753 Not judgmental to self or others",
+      "\u2753 Resistant to guilt, self-disgust or self-contempt",
+      "\u2715 Believe that people fail because of chance and luck"
+    ],
+    "cons": [
+      "\u2713 Less likely to be successful in school",
+      "\u2713 Put off responsibilities and concentrating more on fun",
+      "\u2753 Less effective in administrative or managerial positions",
+      "\u2753 Tend to be regarded as underachievers",
+      "\u2753 Focus less on work than others",
+      "\u2753 Likely to procrastinate, miss deadlines, fail to complete",
+      "\u2753 Need excessively supervision to complete tasks",
+      "\u2753 Believe people fail bec. chance, luck play determining roles",
+      "\u2715 Not concerned with schedules, timelines, efficiency",
+      "\u2715 Lacks focus and too-easily distracted"
+    ]
+  },
+  {
+    "id": 6,
+    "trait": "Conscientiousness",
+    "aspect": "Orderliness",
+    "score": 12,
+    "rating": "Low",
+    "pros": [
+      "\u2713 See the world in shades of grey and not in black and white",
+      "\u2713 Takes things as they come; let's chance determine outcome",
+      "\u2713 Tolerate the mess, disruption and intervening periods of chaos",
+      "\u2753 Not disturbed, upset or disgusted by mess, disorder, chaos",
+      "\u2753 Very non-judgmental and devil-may-care with self and others",
+      "\u2753 Loose schedules, unscheduled; not bothered by disruption"
+    ],
+    "cons": [
+      "\u2713 Doesn't use schedules, list or routines",
+      "\u2713 Don’t care for routine and predictability",
+      "\u2753 Even if puts plan, rarely implement those plans",
+      "\u2753 Doesn't abide by rules or procedures",
+      "\u2753 Requires supervision to maintain attention and focus",
+      "\u2715 Not oriented towards detail",
+      "\u2715 Too-easily distracted"
+    ]
+  },
+  {
+    "id": 7,
+    "trait": "Extraversion",
+    "aspect": "",
+    "score": 43,
+    "rating": "Average",
+    "pros": [],
+    "cons": []
+  },
+  {
+    "id": 8,
+    "trait": "Extraversion",
+    "aspect": "Enthusiasm",
+    "score": 30,
+    "rating": "Moderately Low",
+    "pros": [
+      "\u2713 More private kind of person",
+      "\u2713 Prefers quieter activities",
+      "\u2753 Can enjoy self around other people but in moderation",
+      "\u2753 Doesn't crave the spotlight"
+    ],
+    "cons": [
+      "\u2713 Not particularly easy to get to know",
+      "\u2713 Not known for talkative nature",
+      "\u2713 Tend to talk only about things found of particular interest",
+      "\u2713 Not easily open up to people, esp. in larger social gatherings",
+      "\u2713 Prefers solitude",
+      "\u2713 Rarely seek out stimulation, excitement, activity or fun",
+      "\u2753 Rarely excitable",
+      "\u2753 Laughs more rarely than others",
+      "\u2753 Not particularly positive about what might happen next",
+      "\u2715 Not particularly positive or",
+      "\u2715 Not gregarious or people-loving"
+    ]
+  },
+  {
+    "id": 9,
+    "trait": "Extraversion",
+    "aspect": "Assertiveness",
+    "score": 58,
+    "rating": "Average",
+    "pros": [
+      "\u2713 Puts forward own opinions but not compelled to do so",
+      "\u2753 Acts in an influential or captivating manner, but not habitual",
+      "\u2753 Doesn't act without thinking",
+      "\u2715 Not particularly impulsive"
+    ],
+    "cons": [
+      "\u2713 Takes charge, spontaneously, but often let others step in first",
+      "\u2713 Can act in ambiguous situations but often let others lead way",
+      "\u2753 Not dominant and doesn't strive to control social situations"
+    ]
+  },
+  {
+    "id": 10,
+    "trait": "Neuroticism",
+    "aspect": "",
+    "score": 50,
+    "rating": "Average",
+    "pros": [],
+    "cons": []
+  },
+  {
+    "id": 11,
+    "trait": "Neuroticism",
+    "aspect": "Withdrawal",
+    "score": 72,
+    "rating": "Moderately High",
+    "pros": [
+      "\u2713 Concerned that something bad might happen"
+    ],
+    "cons": [
+      "\u2713 Likely to feel sad, lonesome, disappointed and grief-stricken",
+      "\u2713 Become embarrassed a bit more easily; is self-conscious",
+      "\u2713 Sensitive to social rejection; feel more hurt than expected",
+      "\u2713 Once hurt, frightened or anxious &mdash; takes longer to recover",
+      "\u2753 Feels higher anticipatory anxiety",
+      "\u2715 More challenging to approach new &hellip; complex situations",
+      "\u2715 Avoids or withdraws in the unknown and unexpected",
+      "\u2715 Higher levels of doubt and worry",
+      "\u2715 Discouraged more rapidly in threat and punishment"
+    ]
+  },
+  {
+    "id": 12,
+    "trait": "Neuroticism",
+    "aspect": "Volatility",
+    "score": 29,
+    "rating": "Moderately Low",
+    "pros": [
+      "\u2713 Tend to not to vary much in mood",
+      "\u2713 Not particularly irritable",
+      "\u2713 Low on disappointment, frustration, pain, social isolation",
+      "\u2713 Express frustration &hellip; quite reasonably and not often",
+      "\u2713 Less argumentative and rarely lose composure",
+      "\u2713 Tend to remain calm and unperturbed even when stressed",
+      "\u2753 People find them easy to be around",
+      "\u2753 When stirred up, upset, angry or irritated; calms down quickly",
+      "\u2753 If overly provoked in a dispute, may still react in kindness"
+    ],
+    "cons": [
+      "\u2713 Tend to get upset if something bad does happen"
+    ]
+  },
+  {
+    "id": 13,
+    "trait": "Openness to Experience",
+    "aspect": "",
+    "score": 45,
+    "rating": "Average",
+    "pros": [],
+    "cons": []
+  },
+  {
+    "id": 14,
+    "trait": "Openness to Experience",
+    "aspect": "Intellect",
+    "score": 5,
+    "rating": "Very Low",
+    "pros": [
+      "\u2753 Suited to stable, straightforward and traditional occupations"
+    ],
+    "cons": [
+      "\u2713 Can be inarticulate",
+      "\u2713 May experience trouble formulating, communicating ideas",
+      "\u2753 Tend to have vocabulary of less normal breadth and depth",
+      "\u2753 Very likely to stick with the tried-and-true than new ideas",
+      "\u2715 Uninterested in ideas and abstract concepts",
+      "\u2715 Not interested in learning philosophical concepts",
+      "\u2715 Doesn't like too much information, particularly if it is complex",
+      "\u2715 Less intellectually curious",
+      "\u2715 Almost never tackle and solve complex abstract problems",
+      "\u2715 Unlikely to engage in issue-oriented discussions",
+      "\u2715 Almost never read idea-centered books",
+      "\u2715 Doesn't enjoy being exposed to novel concepts",
+      "\u2715 Less interested in adapting or seek new experiences",
+      "\u2715 Seldom find complex, rapidly changing occupations to liking"
+    ]
+  },
+  {
+    "id": 15,
+    "trait": "Openness to Experience",
+    "aspect": "Openness",
+    "score": 90,
+    "rating": "Very High",
+    "pros": [
+      "\u2713 Loves beauty",
+      "\u2713 Strikingly sensitive to color and architectural form",
+      "\u2713 Very much like to collect things to the point of obsession",
+      "\u2713 Unusually immersed in a book, movie, own thoughts",
+      "\u2713 Oblivious to the outside world",
+      "\u2713 Respond very strongly to beauty, creativity and art",
+      "\u2753 Very imaginative and love to daydream and reflect on things",
+      "\u2753 Very affected by music of many genres; musical or artistic",
+      "\u2753 Necessary entrepreneurial success; useful at top hierarchies",
+      "\u2753 Can provide new vision and direction on leadership positions"
+    ],
+    "cons": [
+      "\u2713 Requires an outlet for creative ability or cannot thrive",
+      "\u2713 Extremely difficult to transform creativity to money or career",
+      "\u2753 Need to be surrounded by art or beautiful crafts",
+      "\u2753 Impractical and flighty"
+    ]
+  }
+]
