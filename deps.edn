@@ -1,3 +1,5 @@
 {:deps {org.clojure/clojurescript {:mvn/version "1.10.520"}
         reagent {:mvn/version "0.8.1"}
-        reagent-utils {:mvn/version "0.3.3"}}}
+        reagent-utils {:mvn/version "0.3.3"}
+        cljsjs/datatables.net {:mvn/version "1.10.16-0"}
+        cljsjs/jquery {:mvn/version "3.4.0-0"}}}

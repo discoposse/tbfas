@@ -3,9 +3,202 @@
     <head>
         <meta charset="utf-8" />
         <title>Document</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+        <link rel="stylesheet"
+              href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+        <style>
+         body {
+             font: 1rem/150% sans-serif;
+             font-size: 70%;
+         }
+         h1 {
+             font-size: medium;
+             position: absolute;
+             left: 33%;
+             top: 1rem;
+         }
+         a:hover {
+             cursor: pointer;
+         }
+         nav,
+         .tab-content {
+             margin: 1rem;
+         }
+         .tab-content {
+             position: relative;
+         }
+         .nav-item.nav-link.active {
+             font-weight: bold;
+         }
+         .nav-item.nav-link.active {
+             font-weight: bold;
+         }
+         .filters {
+             position: absolute;
+             left: 10.8rem;
+             top: 0.4rem;
+             z-index: 1;
+         }
+         .dropdown-menu {
+             min-width: 100%;
+         }
+         .dropdown .btn,
+         .dropdown .dropdown-item {
+             font-size: x-small;
+         }
+         .dropdown .btn {
+             border-color: #CED4DA;
+         }
+         .dropdown .dropdown-item.active,
+         .dropdown .dropdown-item:active {
+             color: #FFF !important;
+         }
+         .dataTables_filter .form-control {
+             margin: 0;
+         }
+         .table {
+             border: 0;
+             border-collapse: collapse !important;
+             margin-bottom: 1rem !important;
+         }
+         th {
+             border-bottom: 0 !important;
+             padding-left: 0.5rem !important;
+         }
+         th {
+             width: 10%;
+         }
+         th:first-child {
+             width: 1%;
+         }
+         th:nth-child(6),
+         th:last-child {
+             width: 30%;
+         }
+         td:first-child,
+         td:nth-child(3),
+         td:nth-child(4),
+         td:nth-child(5) {
+             text-align: center;
+         }
+         tfoot {
+             display: none;
+         }
+         ul {
+             margin-top: 1rem;
+             padding-left: 0;
+         }
+         ul,
+         li.agree,
+         li.disagree,
+         li.neutral {
+             list-style: none;
+         }
+         li .far {
+             margin-right: 0.25rem;
+             font-weight: bold;
+         }
+         li.agree .far {
+             color: #6A6;
+         }
+         li.neutral .far {
+             color: #66D;
+         }
+         li.disagree .far {
+             color: #D66;
+         }
+         .dataTables_length,
+         .dataTables_filter {
+             margin-bottom: 1rem;
+         }
+         .dataTables_length select,
+         .dataTables_filter input {
+             font-size: 100%;
+             margin: 0 0.5rem;
+         }
+         .dataTables_wrapper {
+             margin-bottom: 1rem;
+         }
+         .copyright {
+             border-top: solid 1px #dee2e6;
+             font-size: smaller;
+             margin: 1rem 0;
+             padding-top: 1rem;
+             text-align: center;
+         }
+        </style>
     </head>
     <body>
         <div id="root"></div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="/out/main.js"></script>
+        <script>
+         $(document).ready(function () {
+             $("table").addClass("table table-sm table-bordered table-hover traits");
+             $("table thead").addClass("bg-light");
+
+             /* Entries: */
+             $(".dataTables_length").addClass("form-inline");
+             $(".dataTables_length select").addClass("form-control form-control-sm");
+
+             /* Search: */
+             $(".dataTables_filter").addClass("form-inline");
+             $(".dataTables_filter input").addClass("form-control form-control-sm");
+
+             /* Enable tooltip: */
+             /* $(() => $('[data-toggle="tooltip"]').tooltip()); */
+
+             /* Add icons before bullet points: */
+             /* $("li.agree").prepend("<i class=\"far fa-thumbs-up\"></i>");
+              * $("li.agree").attr({title: "Agree", "data-toggle": "tooltip", "data-placement": "left"});
+
+              * $("li.neutral").prepend("<i class=\"far fa-hand-peace\"></i>");
+              * $("li.neutral").attr({title: "Neutral", "data-toggle": "tooltip", "data-placement": "left"});
+
+              * $("li.disagree").prepend("<i class=\"far fa-thumbs-down\"></i>");
+              * $("li.disagree").attr({title: "Disagree", "data-toggle": "tooltip", "data-placement": "left"}); */
+
+             /* Dropdowns: */
+             $(".dropdown-item").click(function () {
+                 $(this).parent().parent().find(".btn").text($(this).text());
+                 $(this).parent().find(".dropdown-item").removeClass("active");
+                 $(this).addClass("active");
+             });
+
+             /* Show dropdowns: */
+             $(".show-all").click(() => {
+                 $("li.agree").fadeIn("slow");
+                 $("li.neutral").fadeIn("slow");
+                 $("li.disagree").fadeIn("slow");
+             });
+
+             $(".show-agree").click(() => {
+                 $("li.agree").fadeIn("slow");
+                 $("li.neutral").fadeOut("slow");
+                 $("li.disagree").fadeOut("slow");
+             });
+
+             $(".show-neutral").click(() => {
+                 $("li.agree").fadeOut("slow");
+                 $("li.neutral").fadeIn("slow");
+                 $("li.disagree").fadeOut("slow");
+             });
+
+             $(".show-disagree").click(() => {
+                 $("li.agree").fadeOut("slow");
+                 $("li.neutral").fadeOut("slow");
+                 $("li.disagree").fadeIn("slow");
+             });
+
+             // Select "Show All Bullets" dropdown by default:
+             $(".show-all").click();
+         });
+        </script>
     </body>
 </html>
